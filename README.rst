@@ -3,7 +3,7 @@ Pyltsv
 
 Dead simple LTSV parser written in Python C Extension.
 
-- `Repository <https://github.com/heavenshell/py-pyltsv`_
+- `Repository <https://github.com/heavenshell/py-pyltsv>`_
 
 
 This is a experimental library.
@@ -25,6 +25,7 @@ Usage
 -----
 
 ::
+
   >>> from pyltsv import parse_file, parse_line
   >>> parse_file("ip:127.0.0.1\thost:localhost")
   {'ip': '127.0.0.1', 'host': 'localhost'}
@@ -47,6 +48,7 @@ C Extension    80.0704956055
 If you want to run benchmark script, copy `pyltsv.so` from `build` directory.
 
 ::
+
   $ python setup.py build
   $ cp build/lib.macosx-10.8-x86_64-2.7/pyltsv/pyltsv.so benchmark/.
   $ cd benchmark
