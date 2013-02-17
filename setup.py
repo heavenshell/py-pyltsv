@@ -10,6 +10,7 @@
     :copyright: (c) 2013 Shinya Ohyanagi, All rights reserved.
     :license: BSD, see LICENSE for more details.
 """
+import os
 from setuptools import Extension, setup, find_packages
 
 requires = []
@@ -25,10 +26,12 @@ module = Extension('pyltsv.pyltsv',
     #define_macros=[('DEVELOP', None)],
 )
 
+description = file(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 setup(
     name='pyltsv',
     version='0.1',
     description='Dead simple LTSV parser written in C Extension.',
+    long_description=description,
     install_requires=requires,
     packages=find_packages(exclude=['tests']),
     package_dir={'': '.'},
